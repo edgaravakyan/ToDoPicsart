@@ -99,10 +99,14 @@ function footer(toDos, onChange) {
 }
 
 function toDoList() {
+   const curTime = new Date()
+   const day = curTime.getDate();
+   const month = curTime.getMonth() + 1; 
+   const year = curTime.getFullYear();
    let toDos = [
-      {name:"learn C", deadLine: "12-06-23", completed:false},
-      {name:"learn JS", deadLine: "12-06-23", completed:false},
-      {name:"learn architecture", deadLine: "12-06-23", completed:false}
+      {name:"learn C", deadLine: year + "-" + month + "-" + day, completed:false},
+      {name:"learn JS", deadLine: year + "-" + month + "-" + day, completed:false},
+      {name:"learn architecture", deadLine: year + "-" + month + "-" + day, completed:false}
    ]
    const main = document.createElement("div")
 
